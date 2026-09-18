@@ -1,3 +1,6 @@
-// build 83c99bad97
-// (auto) 7b05c8
-export { default as useCounter } from './useCounter';
+// build bf73c47d74
+// (bot) 918e1e
+import { Client, GatewayIntentBits } from 'discord.js';
+const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+client.once('ready', () => console.log('ready'));
+client.login(process.env.DISCORD_TOKEN);
